@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <!--imagenes y titulo de la pagina-->
+    <link rel="shortcut icon" href="imagenes/logo.jpeg">
+    <title>
+        CompuTelNet
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+
+    <!--style footer-->
+    <style>
+    *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body {
+
+    font-family:sans-serif ;
+    text-transform: capitalize;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer {
+    background-color:black;
+    padding: 80px;
+}
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-links{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-links h4 {
+    font-size:20px ;
+    color:#ffffff;
+    margin-bottom:25px ;
+    font-weight: 500;
+    border-bottom: 2px solid grey;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+.footer-links ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    color:white;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+.footer-links ul li a:hover{
+    color:#ffffff;
+    padding-left: 6px;
+}
+.social-link a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color:rgba(255, 255, 255, 0.2) ;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color:#ffffff;
+    transition: all .5s ease;
+}
+.social-link a:hover {
+    background-color: whitesmoke;
+}
+@media(max-width:991px){
+    .footer-row{
+        text-align: center;
+    }
+    .footer-links{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+}
+    </style>
+    <!--end style footer-->
+
+    <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+
+    <!-- barra Code -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+        <!-- link index inicio content -->
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                <img src="imagenes/logo.jpeg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                CompuTelNet
+                </a>
+            </div>
+            </nav>
+            <!--fin content-->
+            <!--paginas de barra de navegacion-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="localizacion.html">localizaciones</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle show" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                Servicios
+                </a>
+                <ul class="dropdown-menu show" data-bs-popper="static">
+                <li><a class="dropdown-item" href="#">Cita</a></li>
+                <li><a class="dropdown-item" href="#">Cotisacion</a></li>
+                <li><a class="dropdown-item" href="#">Reportar problemas</a></li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+
+        <!--profile link code-->
+        <a href="#"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M12 20a7.966 7.966 0 0 1-5.002-1.756l.002.001v-.683c0-1.794 1.492-3.25 3.333-3.25h3.334c1.84 0 3.333 1.456 3.333 3.25v.683A7.966 7.966 0 0 1 12 20ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10c0 5.5-4.44 9.963-9.932 10h-.138C6.438 21.962 2 17.5 2 12Zm10-5c-1.84 0-3.333 1.455-3.333 3.25S10.159 13.5 12 13.5c1.84 0 3.333-1.455 3.333-3.25S13.841 7 12 7Z" clip-rule="evenodd"/>
+        </svg>
+        </a>
+        <!--end profile code-->
+
+        <!-- car link-->
+        <a href="#"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12.268 6A2 2 0 0 0 14 9h1v1a2 2 0 0 0 3.04 1.708l-.311 1.496a1 1 0 0 1-.979.796H8.605l.208 1H16a3 3 0 1 1-2.83 2h-2.34a3 3 0 1 1-4.009-1.76L4.686 5H4a1 1 0 0 1 0-2h1.5a1 1 0 0 1 .979.796L6.939 6h5.329Z"/>
+          <path d="M18 4a1 1 0 1 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 1 0 2 0V8h2a1 1 0 1 0 0-2h-2V4Z"/>
+        </svg>
+        </a>
+        <!-- end car link-->
+
+
+    </nav>
+    <!-- barra end Code -->
+
+    <br><center><h1>Productos Y Accesorios</h1></center><br>
+    
+    <!-- cartas presentacion code-->
+    <center><h2>Computadoras</h2></center>
+    <center><p>Computadoras Durederas Y De Buen Rendimiento </p></center>
+
+    <div class="row row-cols-1 row-cols-md-6 g-4 ">
+        <div class="col">
+            <div class="card h-100">
+            <img class="bd-placeholder-img card-img-top" width="75%" height="100%" src="imagenes/compu-venta.jpg" alt="">
+            <div class="card-body">
+
+                <!--datos del producto 1-->
+                <h5 class="card-title">DELL LATITUDE</h5>
+                <p class="card-text">Seguridad y conford en una sola computadora</p>
+                <center><span>1700$</span></center><br>
+                <!--fin datos-->
+
+
+                <!--boton de compra 1-->
+                <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary" type="button">comprar</button>
+                </div>
+                <!--fin boton-->
+
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+            <img class="bd-placeholder-img card-img-top" width="75%" height="100%" src="imagenes/teclado-venta.png" alt="">            <div class="card-body">
+                <!--datos del producto 2-->
+                <h5 class="card-title">DELL LATITUDE</h5>
+                <p class="card-text">Seguridad y conford en una sola computadora</p>
+                <center><span>1700$</span></center><br>
+                <!--fin datos-->
+
+                <!--boton de compra 2-->
+                <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary" type="button">comprar</button>
+                </div>
+                <!--fin boton-->
+
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+            <img class="bd-placeholder-img card-img-top" width="75%" height="100%" src="imagenes/mouse-venta.jpg" alt="">            
+            <div class="card-body">
+                <!--datos del producto 3-->
+                <h5 class="card-title">logitech g903</h5>
+                <p class="card-text">Lightspeed Gaming, ideal peara trabajos y juegos.</p>
+                <center><span>85$</span></center><br>
+                <!--fin datos-->
+
+
+                <!--boton de compra 3-->
+                <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary" type="button">comprar</button>
+                </div>
+                <!--fin boton-->
+                
+            </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------------------------>
+    
+
+    <div class="row row-cols-1 row-cols-md-6 g-4 ">
+        <div class="col">
+            <div class="card h-100">
+            <img class="bd-placeholder-img card-img-top" width="75%" height="100%" src="imagenes/compu-venta.jpg" alt="">
+            <div class="card-body">
+
+                <!--datos del producto 1-->
+                <h5 class="card-title">DELL LATITUDE</h5>
+                <p class="card-text">Seguridad y conford en una sola computadora</p>
+                <center><span>1700$</span></center><br>
+                <!--fin datos-->
+
+
+                <!--boton de compra 1-->
+                <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary" type="button">comprar</button>
+                </div>
+                <!--fin boton-->
+
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+            <img class="bd-placeholder-img card-img-top" width="75%" height="100%" src="imagenes/teclado-venta.png" alt="">            <div class="card-body">
+                <!--datos del producto 2-->
+                <h5 class="card-title">DELL LATITUDE</h5>
+                <p class="card-text">Seguridad y conford en una sola computadora</p>
+                <center><span>1700$</span></center><br>
+                <!--fin datos-->
+
+                <!--boton de compra 2-->
+                <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary" type="button">comprar</button>
+                </div>
+                <!--fin boton-->
+
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+            <img class="bd-placeholder-img card-img-top" width="75%" height="100%" src="imagenes/mouse-venta.jpg" alt="">            
+            <div class="card-body">
+                <!--datos del producto 3-->
+                <h5 class="card-title">logitech g903</h5>
+                <p class="card-text">Lightspeed Gaming, ideal peara trabajos y juegos.</p>
+                <center><span>85$</span></center><br>
+                <!--fin datos-->
+
+
+                <!--boton de compra 3-->
+                <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary" type="button">comprar</button>
+                </div>
+                <!--fin boton-->
+                
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------------------------------------>
+    
+
+    <center><h2>Accesorios</h2></center>
+    <center><p>Maxima Ducarion y Maximo Rendimiento </p></center>
+
+    <div class="row row-cols-1 row-cols-md-6 g-4 ">
+        <div class="col">
+            <div class="card h-100">
+            <img class="bd-placeholder-img card-img-top" width="75%" height="100%" src="imagenes/compu-venta.jpg" alt="">
+            <div class="card-body">
+
+                <!--datos del producto 1-->
+                <h5 class="card-title">DELL LATITUDE</h5>
+                <p class="card-text">Seguridad y conford en una sola computadora</p>
+                <center><span>1700$</span></center><br>
+                <!--fin datos-->
+
+
+                <!--boton de compra 1-->
+                <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary" type="button">comprar</button>
+                </div>
+                <!--fin boton-->
+
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+            <img class="bd-placeholder-img card-img-top" width="75%" height="100%" src="imagenes/teclado-venta.png" alt="">            <div class="card-body">
+                <!--datos del producto 2-->
+                <h5 class="card-title">DELL LATITUDE</h5>
+                <p class="card-text">Seguridad y conford en una sola computadora</p>
+                <center><span>1700$</span></center><br>
+                <!--fin datos-->
+
+                <!--boton de compra 2-->
+                <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary" type="button">comprar</button>
+                </div>
+                <!--fin boton-->
+
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+            <img class="bd-placeholder-img card-img-top" width="75%" height="100%" src="imagenes/mouse-venta.jpg" alt="">            
+            <div class="card-body">
+                <!--datos del producto 3-->
+                <h5 class="card-title">logitech g903</h5>
+                <p class="card-text">Lightspeed Gaming, ideal peara trabajos y juegos.</p>
+                <center><span>85$</span></center><br>
+                <!--fin datos-->
+
+
+                <!--boton de compra 3-->
+                <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary" type="button">comprar</button>
+                </div>
+                <!--fin boton-->
+                
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------------------------------------>
+    
+
+    <div class="row row-cols-1 row-cols-md-6 g-4 ">
+        <div class="col">
+            <div class="card h-100">
+            <img class="bd-placeholder-img card-img-top" width="75%" height="100%" src="imagenes/compu-venta.jpg" alt="">
+            <div class="card-body">
+
+                <!--datos del producto 1-->
+                <h5 class="card-title">DELL LATITUDE</h5>
+                <p class="card-text">Seguridad y conford en una sola computadora</p>
+                <center><span>1700$</span></center><br>
+                <!--fin datos-->
+
+
+                <!--boton de compra 1-->
+                <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary" type="button">comprar</button>
+                </div>
+                <!--fin boton-->
+
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+            <img class="bd-placeholder-img card-img-top" width="75%" height="100%" src="imagenes/teclado-venta.png" alt="">            <div class="card-body">
+                <!--datos del producto 2-->
+                <h5 class="card-title">DELL LATITUDE</h5>
+                <p class="card-text">Seguridad y conford en una sola computadora</p>
+                <center><span>1700$</span></center><br>
+                <!--fin datos-->
+
+                <!--boton de compra 2-->
+                <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary" type="button">comprar</button>
+                </div>
+                <!--fin boton-->
+
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+            <img class="bd-placeholder-img card-img-top" width="75%" height="100%" src="imagenes/mouse-venta.jpg" alt="">            
+            <div class="card-body">
+                <!--datos del producto 3-->
+                <h5 class="card-title">logitech g903</h5>
+                <p class="card-text">Lightspeed Gaming, ideal peara trabajos y juegos.</p>
+                <center><span>85$</span></center><br>
+                <!--fin datos-->
+
+
+                <!--boton de compra 3-->
+                <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary" type="button">comprar</button>
+                </div>
+                <!--fin boton-->
+                
+            </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- cartas presentacion end code-->
+
+    </body>
+    <footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-row">
+
+            <div class="footer-links">
+
+                <h4>Dueno de la empresa</h4>
+                <ul>
+                    <li><a href="#">Emilio Renteria</a></li>
+                </ul>
+
+
+            </div>
+            <div class="footer-links">
+
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="#">Preguntas</a></li>
+                    <li><a href="#">Compras</a></li>
+                    <li><a href="#">Envios</a></li>
+                    <li><a href="#">Estatus de orden</a></li>
+                    <li><a href="#">Pago</a></li>
+                   
+                </ul>
+
+
+            </div>
+            <div class="footer-links">
+
+                <h4>Tienda</h4>
+                <ul>
+                    <li><a href="#">Productos</a></li>
+                </ul>
+
+
+            </div>
+            <div class="footer-links">
+
+                <h4>Contactanos</h4>
+              <div class="social-link">
+                <a href="#"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" d="M12.037 21.998a10.313 10.313 0 0 1-7.168-3.049 9.888 9.888 0 0 1-2.868-7.118 9.947 9.947 0 0 1 3.064-6.949A10.37 10.37 0 0 1 12.212 2h.176a9.935 9.935 0 0 1 6.614 2.564L16.457 6.88a6.187 6.187 0 0 0-4.131-1.566 6.9 6.9 0 0 0-4.794 1.913 6.618 6.618 0 0 0-2.045 4.657 6.608 6.608 0 0 0 1.882 4.723 6.891 6.891 0 0 0 4.725 2.07h.143c1.41.072 2.8-.354 3.917-1.2a5.77 5.77 0 0 0 2.172-3.41l.043-.117H12.22v-3.41h9.678c.075.617.109 1.238.1 1.859-.099 5.741-4.017 9.6-9.746 9.6l-.215-.002Z" clip-rule="evenodd"/>
+                </svg>
+                </a>
+                <a href="#"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z"/>
+                </svg>
+                </a>
+                <a href="#"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z" clip-rule="evenodd"/>
+                </svg>
+                </a>
+              
+
+              </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</footer>
+</html>

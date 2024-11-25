@@ -1,0 +1,220 @@
+@font-face {
+    font-family: "Glacial Indifference";
+    src: url("../fonts/GlacialIndifference-Regular.otf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background: #C8A48B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Glacial Indifference";
+    color: white;
+}
+header .logo{
+    position: relative;
+    left: 30px;
+}
+header .nav{
+    display: flex;
+    list-style: none;
+}
+
+.nav li ul{
+    visibility: hidden;
+    list-style: none;
+    position: absolute;
+    transform: translateX(-25%) translateY(10%);
+    background: #ffffff;
+    padding: 20px;
+    width: 200px;
+    border: 1px solid rgba(128, 128, 128, 0.644);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px gray;
+    height: 80px;
+}
+.nav:hover > li > ul{
+    visibility: visible;
+}
+.nav li ul::before{
+    content: '';
+    position: absolute;
+    top: -11px;
+    left: 25%;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid rgb(255, 255, 255);
+}
+.nav li ul li a{
+    text-decoration: none;
+    color: rgb(109, 109, 109);
+}
+.nav li ul li{
+    padding: 10px;
+}
+header .derecha{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+}
+header .derecha .carrito{
+    position: absolute;
+    right: 30px;
+}
+.nav img{
+    height: 36px;
+}
+.menu{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    box-shadow: -2px 2px 8px rgba(0,0,0,0.15);
+    overflow: hidden;
+    font-family: "Glacial Indifference";
+}
+.dep{
+    position: absolute;
+    padding: 10px;
+    left: 40px;
+    display: flex;
+    list-style: none;
+}
+.dep li{
+    position: relative;
+    font-size: 1.1em;
+}
+.dep li ul{
+    visibility: hidden;
+    position: absolute;
+    background: #ffffff;
+    transform: translateY(3%);
+    list-style: none;
+    width: 300px;
+    border: 1px solid rgba(116, 116, 116, 0.568);
+    padding: 10px;
+}
+.dep li img{
+    position: absolute;
+    height: 100%;
+}
+.dep li ul li{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.dep li ul li a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.644);
+}
+.dep:hover > li > ul{
+    visibility: visible;
+}
+.dep li ul li:hover{
+    cursor: pointer;
+    background: #9494948d;
+}
+
+footer{
+    overflow: hidden;
+    width: 100%;
+    height: 70px;
+    background: #E8D8CD;
+}
+footer .barra{
+    width: 100%;
+    height: 10%;
+    background: #C8A48B;
+}
+footer .texto{
+    display: flex;
+    font-size: 10px;
+    padding: 20px;
+    font-family: "Glacial Indifference";
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-items{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Glacial Indifference';
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item{
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+
+.item figure{
+    overflow: hidden;
+}
+
+.item:hover img{
+    transform: scale(1.2);
+}
+
+.info-product{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.info-product button{
+    width: 90%;
+    border: none;
+    background: none;
+    outline: none;
+    background-color: #ff9dc9;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.info-product button a{
+    text-decoration: none;
+    font-family: 'Glacial Indifference';
+    color: #595959;
+    transition: all 0.5s ease;
+}
+.info-product button:hover{
+    transform: scale(1.1);
+    background: #595959;
+}
+.info-product button:hover a{
+    color: #ff9dc9;
+}

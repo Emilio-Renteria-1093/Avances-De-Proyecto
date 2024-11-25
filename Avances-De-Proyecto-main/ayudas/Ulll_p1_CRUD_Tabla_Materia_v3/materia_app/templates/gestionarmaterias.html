@@ -1,0 +1,79 @@
+{% extends "index.html" %}
+
+
+{% block title %} Gestion materias {% endblock %}
+
+{% block cuerpo %}
+<div class="row"> <!--la fila-->
+    <div class="col-sm-12  col-md-4 col-lg-4 col-xl-4"> <!--colomna izq-->
+        
+        <h1>Mama</h1>
+            <!--  la tabla  -->
+
+        <!--txt codigo-->
+        <div class="car-body">
+            <form action="registrarmateria/" method="POST"> {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" id="txtcodigo" name="txtcodigo" class="form-control" placeholder="codigo materia" minlength="1" maxlength="6" required>
+                </div>
+
+                <!--txt materia-->
+                <div class="form-group">
+                    <input type="text" id="txtnombre" name="txtnombre"  class="form-control" placeholder="nombre" minlength="1" maxlength="100" required>
+                </div>
+
+        <!--txt creditos-->
+                <div class="form-group">
+                    <input type="text" id="txtcreditos" name="txtcreditos"  class="form-control" placeholder="creditos" min="1" max="9" required>
+                </div>
+
+                <div class="car-body">
+                <button type="submit" class="btn btn-primary">guardar materias</button>
+                </div>
+
+            </form>
+        </div>
+                <!--  la tabla  -->
+                
+    </div><!--colomna izq-->
+
+
+
+
+
+<div class="row"> 
+    <div class="col-sm-12  col-md-8 col-lg-8 col-xl-8"> <!--colomna derecha-->
+        
+        <h1>listado de materias</h1>
+                <!--  la tabla  -->
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">codigo</th>
+                        <th scope="col">nombre</th>
+                        <th scope="col">creditos</th>
+                        <th scope="col">opciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for m in lasmaterias %}
+
+                        <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{m.codigo}}</td>
+                        <td>{{m.nombre}}</td>
+                        <td>{{m.creditos}}</td>
+                        <td><a href="seleccionarmateria/{{m.codigo}}" class="btn btn-info">editar</a> </td><!--falta-->
+                        <td><a href="borrarmateria/{{m.codigo}}" class="btn btn-danger">borrar</a> </td><!--falta-->
+
+                        </tr>
+                        
+                        {% endfor %}
+                    </tbody>
+                </table>
+    </div><!--colomna derecha-->
+</div>
+</div><!--la fila-->
+
+{% endblock %}
